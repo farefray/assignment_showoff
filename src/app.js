@@ -3,11 +3,22 @@ require('dotenv').config();
 
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+
 const app = express();
 
+const controller = require('./controller');
 
-app.use(express.json());
-app.get('/', res.send({
+// Configure bodyparser to handle post requests
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
+app.use(bodyParser.json());
+
+app.post('/', controller.fetchRecords);
+
+app.get('/', (req, res) => res.send({
   code: 0
 }));
 
