@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-assignment",
+  "version": "1.0.0",
+  "description": "proof of concept assignment task",
+  "main": "src/server.js",
+  "repository": "https://github.com/farefray/assignment_showoff.git",
+  "author": "Maksym Fedan <maksym.fedan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/server.js"
+  },
+  "devDependencies": {
+    "jest": "^26.2.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.0",
+    "mongoose": "^5.9.27"
+  }
+}
