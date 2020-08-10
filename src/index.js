@@ -9,7 +9,9 @@ async function main() {
   try {
     await store.connect();
   } catch (error) {
-    console.log(error)
+    console.log("Error establishing MongoDB access", error);
+    // Should be logged, emitted to some resolution holder
+    process.exit(1);
   }
 
   // Start up the server on the port specified

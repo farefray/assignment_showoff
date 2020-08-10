@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const recordSchema = new Schema({
+const RecordSchema = new Schema({
   key: {
     type: String,
     required: true
@@ -17,4 +17,4 @@ const recordSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model('record', recordSchema);
+module.exports = mongoose.model('Record', RecordSchema);
