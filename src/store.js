@@ -5,9 +5,11 @@ const connect = () => {
     .connect(process.env.mongodb_uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true
+    }).catch((err) => {
+      //todo
     })
 }
 
 module.exports = {
-  connect: connect
+  connect
 };
