@@ -8,10 +8,11 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon ./src/index.js",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "devDependencies": {
-    "jest": "^26.2.2"
+    "jest": "^26.2.2",
+    "sinon": "^9.0.2"
   },
   "dependencies": {
     "axios": "^0.19.2",

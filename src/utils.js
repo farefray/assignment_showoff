@@ -1,7 +1,6 @@
 /**
- * Conatins util functions to be used over the project
+ * Contains util functions to be used over the project
  */
-
 
 /**
  * @description Converts sting to Date suitable for mongoose queries
@@ -11,6 +10,9 @@ const dateFromString = (dateString) => {
   return new Date(new Date(dateString))
 }
 
+/**
+ * @param {Date} d
+ */
 function isValidDate(d) {
   return d instanceof Date && !isNaN(d);
 }

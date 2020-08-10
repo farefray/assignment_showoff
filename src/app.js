@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 // Usually I would use a router layer, but since we only need one endpoint, we serve it right here
 app.post('/', controller.fetchRecords);
 
-// Response handling. Should be the last middleware
+// Response handling. Should be the last middleware. Probably not the best solution and should be improved
 app.use(apiResponseMiddleware);
 
 module.exports = app;
