@@ -11,3 +11,6 @@ Assumptions:
 Commands:
   Run api: *npm run start*
   Run tests: *npm run test*
+
+Notes:
+  Before launch you have to set MongoDB url and port for an app, using .env file(@see env.dist example)

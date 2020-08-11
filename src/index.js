@@ -4,6 +4,8 @@ const app = require('./app');
 // Server Initialization
 main();
 
+const PORT = process.env.PORT || process.env.SERVERPORT; // heroku dynamic env PORT or fallback to port set from our variables
+
 async function main() {
   console.log('Initializing connection to the database');
   try {
@@ -15,7 +17,7 @@ async function main() {
   }
 
   // Start up the server on the port specified
-  app.listen(process.env.SERVERPORT);
-  console.log('Web API Server - listening on port: ' + process.env.SERVERPORT);
+  app.listen(PORT);
+  console.log('Web API Server - listening on port: ' + PORT);
 }
 
