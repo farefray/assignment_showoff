@@ -3,7 +3,7 @@
  */
 
 const store = require("./store");
-const { dateFromString, isValidDate } = require('./utils');
+const { dateFromString, isValidDate, DATE_END_OF_DAY, DATE_START_OF_DAY } = require('./utils');
 const ApiError = require("./objects/ApiError");
 const { ERROR_CODE, RESPONSE_MSG } = require('./constants');
 
@@ -22,8 +22,8 @@ const Controller = {
       throw new ApiError(ERROR_CODE.BAD_REQUEST, RESPONSE_MSG.MISSED_REQUIRED_PARAM);
     }
 
-    startDate = dateFromString(startDate);
-    endDate = dateFromString(endDate);
+    startDate = dateFromString(startDate, DATE_START_OF_DAY);
+    endDate = dateFromString(endDate, DATE_END_OF_DAY);
 
     if (!isValidDate(startDate) || !isValidDate(endDate)) {
       throw new ApiError(ERROR_CODE.BAD_REQUEST, RESPONSE_MSG.WRONG_DATE_FORMAT);
